@@ -1,0 +1,15 @@
+let isLoggedIn = true;
+let isAdmin = false;
+let hasPermission = true;
+
+console.log("Admin access:", isLoggedIn && isAdmin);
+console.log("Can view page:", isLoggedIn || hasPermission);
+console.log("Is NOT admin:", !isAdmin);
+
+let userName = "Jabulani Mayenda";
+let displayName = userName || "Guest User";
+console.log("Display name:", displayName);
+
+let count = 0;
+let result = count ?? 10;
+console.log("Nullish result:", result);
