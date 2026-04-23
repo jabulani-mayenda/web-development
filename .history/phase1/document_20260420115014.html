@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>goated</title>
+</head>
+<body>
+    <input type="text" id="userInput" placeholder="Enter something">
+    <button onclick="processInput()">Submit</button>
+    <p id="result"></p>
+    <p id="output"></p>
+
+    <p>Before script content</p>
+    
+    <!-- Use a container for dynamic content -->
+    <div id="dynamicContent"></div>
+    
+    <p>After script content</p>
+
+    <script>
+        
+        const dynamicDiv = document.getElementById("dynamicContent");
+        dynamicDiv.innerHTML = "<p>my name is jabulani benson mayenda</p>";
+        
+        alert("Important message!");
+        alert(`The result is: ${5 + 3}`);
+        
+        document.getElementById("output").textContent = "This text was inserted via JavaScript";
+        
+        function processInput() {
+            const input = document.getElementById("userInput").value;
+            document.getElementById("result").textContent = `You entered: ${input}`;
+        }
+        
+        
+        const shouldContinue = confirm("Do you want to continue?");
+        if (shouldContinue) {
+            dynamicDiv.innerHTML += "<p>User chose to continue</p>";
+        } else {
+            dynamicDiv.innerHTML += "<p>User chose to cancel</p>";
+        }
+    </script>
+</body>
+</html>
